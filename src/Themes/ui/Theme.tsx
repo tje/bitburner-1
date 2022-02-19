@@ -23,6 +23,22 @@ declare module "@mui/material/styles" {
       successdark: React.CSSProperties["color"];
       white: React.CSSProperties["color"];
       black: React.CSSProperties["color"];
+      terminalblack: React.CSSProperties["color"];
+      terminalred: React.CSSProperties["color"];
+      terminalgreen: React.CSSProperties["color"];
+      terminalyellow: React.CSSProperties["color"];
+      terminalblue: React.CSSProperties["color"];
+      terminalmagenta: React.CSSProperties["color"];
+      terminalcyan: React.CSSProperties["color"];
+      terminalwhite: React.CSSProperties["color"];
+      terminalbrightblack: React.CSSProperties["color"];
+      terminalbrightred: React.CSSProperties["color"];
+      terminalbrightgreen: React.CSSProperties["color"];
+      terminalbrightyellow: React.CSSProperties["color"];
+      terminalbrightblue: React.CSSProperties["color"];
+      terminalbrightmagenta: React.CSSProperties["color"];
+      terminalbrightcyan: React.CSSProperties["color"];
+      terminalbrightwhite: React.CSSProperties["color"];
     };
   }
   interface ThemeOptions {
@@ -42,6 +58,22 @@ declare module "@mui/material/styles" {
       successdark: React.CSSProperties["color"];
       white: React.CSSProperties["color"];
       black: React.CSSProperties["color"];
+      terminalblack: React.CSSProperties["color"];
+      terminalred: React.CSSProperties["color"];
+      terminalgreen: React.CSSProperties["color"];
+      terminalyellow: React.CSSProperties["color"];
+      terminalblue: React.CSSProperties["color"];
+      terminalmagenta: React.CSSProperties["color"];
+      terminalcyan: React.CSSProperties["color"];
+      terminalwhite: React.CSSProperties["color"];
+      terminalbrightblack: React.CSSProperties["color"];
+      terminalbrightred: React.CSSProperties["color"];
+      terminalbrightgreen: React.CSSProperties["color"];
+      terminalbrightyellow: React.CSSProperties["color"];
+      terminalbrightblue: React.CSSProperties["color"];
+      terminalbrightmagenta: React.CSSProperties["color"];
+      terminalbrightcyan: React.CSSProperties["color"];
+      terminalbrightwhite: React.CSSProperties["color"];
     };
   }
 }
@@ -66,6 +98,22 @@ export function refreshTheme(): void {
       successdark: Settings.theme.successdark,
       white: Settings.theme.white,
       black: Settings.theme.black,
+      terminalblack: Settings.theme.terminalblack,
+      terminalred: Settings.theme.terminalred,
+      terminalgreen: Settings.theme.terminalgreen,
+      terminalyellow: Settings.theme.terminalyellow,
+      terminalblue: Settings.theme.terminalblue,
+      terminalmagenta: Settings.theme.terminalmagenta,
+      terminalcyan: Settings.theme.terminalcyan,
+      terminalwhite: Settings.theme.terminalwhite,
+      terminalbrightblack: Settings.theme.terminalbrightblack,
+      terminalbrightred: Settings.theme.terminalbrightred,
+      terminalbrightgreen: Settings.theme.terminalbrightgreen,
+      terminalbrightyellow: Settings.theme.terminalbrightyellow,
+      terminalbrightblue: Settings.theme.terminalbrightblue,
+      terminalbrightmagenta: Settings.theme.terminalbrightmagenta,
+      terminalbrightcyan: Settings.theme.terminalbrightcyan,
+      terminalbrightwhite: Settings.theme.terminalbrightwhite,
     },
     palette: {
       primary: {

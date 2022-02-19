@@ -7,6 +7,7 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
 import Draggable from "react-draggable";
+import { ColoredLogLine } from "./ColoredLogLine";
 import { ResizableBox } from "react-resizable";
 import makeStyles from "@mui/styles/makeStyles";
 import createStyles from "@mui/styles/createStyles";
@@ -276,7 +277,7 @@ function LogWindow(props: IProps): React.ReactElement {
                 {script.logs.map(
                   (line: string, i: number): JSX.Element => (
                     <Typography key={i} className={lineClass(line)}>
-                      {line}
+                      {ColoredLogLine(line)}
                       <br />
                     </Typography>
                   ),

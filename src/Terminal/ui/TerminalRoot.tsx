@@ -14,6 +14,7 @@ import { TerminalInput } from "./TerminalInput";
 import { TerminalEvents, TerminalClearEvents } from "../TerminalEvents";
 import { BitFlumeModal } from "../../BitNode/ui/BitFlumeModal";
 import { CodingContractModal } from "../../ui/React/CodingContractModal";
+import { ColoredLogLine } from "../../ui/React/ColoredLogLine";
 
 import _ from "lodash";
 
@@ -160,7 +161,7 @@ export function TerminalRoot({ terminal, router, player }: IProps): React.ReactE
               return (
                 <ListItem key={i} classes={{ root: classes.nopadding }}>
                   <Typography classes={{ root: lineClass(item.color) }} paragraph={false}>
-                    {item.text}
+                    {ColoredLogLine(item.text)}
                   </Typography>
                 </ListItem>
               );

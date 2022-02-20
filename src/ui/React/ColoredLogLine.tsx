@@ -29,10 +29,12 @@ export function ColoredLogLine(line: string): React.ReactElement {
         }
 
         // Emphasis: bold, underline, italic
-        case "1": style.fontWeight = 'bold'; break;
+        case "1": style.fontWeight = 'bolder'; break;
+        case "2": style.fontWeight = 'lighter'; break;
         case "3": style.fontStyle = 'italic'; break;
         case "4": style.textDecoration = 'underline'; break;
         // Unset emphasis
+        case "21":
         case "22": style.fontWeight = 'unset'; break;
         case "23": style.fontStyle = 'unset'; break;
         case "24": style.textDecoration = 'unset'; break;

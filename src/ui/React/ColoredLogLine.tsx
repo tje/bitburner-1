@@ -3,15 +3,15 @@ import { Settings } from "../../Settings/Settings";
 
 export function ColoredLogLine(line: string): React.ReactElement {
   const partStyle: React.CSSProperties = {
-    fontWeight: 'unset',
-    textDecoration: 'unset',
-    fontStyle: 'unset',
-    color: 'unset',
-    backgroundColor: 'unset',
+    fontWeight: "unset",
+    textDecoration: "unset",
+    fontStyle: "unset",
+    color: "unset",
+    backgroundColor: "unset",
   }
-  const parts = line.split('\x1b').map((part) => {
+  const parts = line.split("\x1b").map((part) => {
     const [ , codeString, text ] = part.match(/^(?:\[([\d;]+)m)?(.*)$/) || [];
-    const codes = codeString?.split(';') ?? [];
+    const codes = codeString?.split(";") ?? [];
     const style = {
       ...partStyle,
     };
@@ -20,28 +20,28 @@ export function ColoredLogLine(line: string): React.ReactElement {
         // Reset everything
         case "0": {
           Object.assign(style, {
-            fontWeight: 'unset',
-            textDecoration: 'unset',
-            color: 'unset',
-            backgroundColor: 'unset',
+            fontWeight: "unset",
+            textDecoration: "unset",
+            color: "unset",
+            backgroundColor: "unset",
           });
           break;
         }
 
         // Emphasis: bold, underline, italic
-        case "1": style.fontWeight = 'bolder'; break;
-        case "2": style.fontWeight = 'lighter'; break;
-        case "3": style.fontStyle = 'italic'; break;
-        case "4": style.textDecoration = 'underline'; break;
+        case "1": style.fontWeight = "bolder"; break;
+        case "2": style.fontWeight = "lighter"; break;
+        case "3": style.fontStyle = "italic"; break;
+        case "4": style.textDecoration = "underline"; break;
         // Unset emphasis
         case "21":
-        case "22": style.fontWeight = 'unset'; break;
-        case "23": style.fontStyle = 'unset'; break;
-        case "24": style.textDecoration = 'unset'; break;
+        case "22": style.fontWeight = "unset"; break;
+        case "23": style.fontStyle = "unset"; break;
+        case "24": style.textDecoration = "unset"; break;
 
         // Unset foreground/background colors
-        case "39": style.color = 'unset'; break;
-        case "49": style.backgroundColor = 'unset'; break;
+        case "39": style.color = "unset"; break;
+        case "49": style.backgroundColor = "unset"; break;
 
         // Set foreground color
         case "30": style.color = Settings.theme.terminalblack; break;

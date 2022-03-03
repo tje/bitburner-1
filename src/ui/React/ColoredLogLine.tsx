@@ -1,20 +1,21 @@
 import React from "react";
 import { Settings } from "../../Settings/Settings";
 
-export function ColoredLogLine(line: string): React.ReactElement {
-  const partStyle: React.CSSProperties = {
+interface IProps {
+  text: string;
+}
+
+export function ColoredLogLine(props: IProps): React.ReactElement {
+  const style: React.CSSProperties = {
     fontWeight: "unset",
     textDecoration: "unset",
     fontStyle: "unset",
     color: "unset",
     backgroundColor: "unset",
   }
-  const parts = line.split("\x1b").map((part) => {
+  const parts = props.text.split("\x1b").map((part) => {
     const [ , codeString, text ] = part.match(/^(?:\[([\d;]+)m)?(.*)$/) || [];
     const codes = codeString?.split(";") ?? [];
-    const style = {
-      ...partStyle,
-    };
     for (const code of codes) {
       switch (code) {
         // Reset everything
@@ -82,10 +83,9 @@ export function ColoredLogLine(line: string): React.ReactElement {
         case "107": style.backgroundColor = Settings.theme.terminalbrightwhite; break;
       }
     }
-    Object.assign(partStyle, style);
     return {
       text,
-      style,
+      style: { ...style },
     }
   });
 

@@ -277,7 +277,7 @@ function LogWindow(props: IProps): React.ReactElement {
                 {script.logs.map(
                   (line: string, i: number): JSX.Element => (
                     <Typography key={i} className={lineClass(line)}>
-                      {ColoredLogLine(line)}
+                      <ColoredLogLine text={line} />
                       <br />
                     </Typography>
                   ),

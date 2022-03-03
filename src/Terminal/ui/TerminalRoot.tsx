@@ -161,7 +161,7 @@ export function TerminalRoot({ terminal, router, player }: IProps): React.ReactE
               return (
                 <ListItem key={i} classes={{ root: classes.nopadding }}>
                   <Typography classes={{ root: lineClass(item.color) }} paragraph={false}>
-                    {ColoredLogLine(item.text)}
+                    <ColoredLogLine text={item.text} />
                   </Typography>
                 </ListItem>
               );
